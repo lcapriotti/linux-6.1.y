@@ -100,6 +100,8 @@
 
 	vcc5v0_usb_otg0: vcc5v0-usb-otg0 {
 		compatible = "regulator-fixed";
+		regulator-boot-on;
+		regulator-always-on;
 		enable-active-high;
 		gpio = <&gpio0 RK_PA6 GPIO_ACTIVE_HIGH>;
 		pinctrl-names = "default";
@@ -480,7 +482,7 @@
 		backlight = <&backlight>;
 		buswidth = <8>;
 		debug = <0x0>;
-		status = "okay";
+		status = "disabled";
 	};
 };
 
